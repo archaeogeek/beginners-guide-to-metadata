@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>A Beginner's Guide to Metadata</title>
+
+		<meta name="description" content="A Beginner's Guide to Metadata">
+		<meta name="author" content="Astun Technology">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h3>A Beginner's Guide to Metadata</h3>
+					<p>
+						<small><a href="http://astuntechnology.com">Jo Cook and Elena Robu, Astun Technology</a></small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Hello!</h2>
+					<aside class="notes">We're the Data Discoverability team at Astun Technology, and over the next 30 minutes we're going to clear up what this whole metadata thing is, and why you should do it, and hopefully bust some of the jargon surrounding it</aside>
+				</section>
+
+				<section>
+						<h3>What is metadata?</h3>
+						<p>The label on a can that tells you...</p>
+						<p>What's actually in it</p>
+						<p>The best before date</p>
+						<p>The company that made it</p>
+						<aside class="notes">Metadata is usually described as data about data, but that doesn't really tell you much. Think of it as the difference between heating up some custard to go on your pudding, or some dog food.</aside>
+				</section>
+
+				<section>
+					<h3>But what is it really?</h3>
+					<p>Additional information that sits alongside the dataset it relates to</p>
+					<p>It should contain a standard set of information, in a standard format, so it's both human and machine-readable</p>
+					<aside class="notes">It can be stored in a separate file, in a catalogue, or embedded in the dataset itself. We're going to focus on using the GeoNetwork metadata catalogue because it allows us to do all of this, in an open source, interoperable way</aside>
+				</section>
+						
+
+				<section>
+					<h3>Why is it important?</h3>
+					<p>The direct benefit: It helps people find and acquire the right data for their task</p>
+				</section>
+
+				<section>
+					<h3>Why is it important (part 2)?</h3>
+					<p>Many indirect benefits: Improved data sharing increases efficiency and reduces cost</p>
+				</section>
+
+				<section>
+					<h2>Key Terminology</h2>
+				</section>
+
+				<section>
+					<h3>XML</h3>
+					<p>eXtensible Markup Language</p>
+					<p>The most common format in which metadata is provided</p>
+					<p>Both a language and a file-format</p>
+					<p>Takes the form of elements, surrounded by start and end tags that describe what the element is and what type of thing it is</p>
+				</section>
+
+				<section>
+					<h3>XML continued</h3>
+					<p>Rules on how and what should be in a metadata record are defined by schemas</p>
+					<p>A record can contain elements from different shared vocabularies, using XML namespaces</p>
+					<p>A valid record must be both "well-formed" (eg no errors in the xml structure) and "schema-valid"</p>
+					<p>Validation rules are often supplied as schematron files</p>
+					<aside class="notes">We probably want to show an example of an xml record with various bits highlighted</aside>
+				</section>
+
+				<section>
+					<h3>Related terms</h3>
+					<p>XSL(T): used for transforming XML documents into other XML, or even other formats such as HTML, text</p>
+					<p>XPath: a way of referring to elements in an XML document</p>
+					<p>XQuery: a SQL-like way of querying the elements in an XML document</p>
+					<aside class="notes">These are used extensively within metadata catalogues such as GeoNetwork to control the display of records on the page, and to allow updates to records. We probably want to show an example of an xml record with various bits highlighted</aside>
+				</section>
+
+				<section>
+					<h3>Schemas, standards and profiles</h3>
+					<p>Schema: specifies the structure of the metadata, the elements, the vocabularies</p>
+					<p>Standard: a schema that has been developed and maintained by a standards organisation</p>
+					<p>Profile: an extension to a standard, or an implementation of it in software, or both</p>
+					<aside class="notes">You'll hear all of these used interchangeably when people talk about metadata. Generally speaking, a profile can only be more strict than the standard it extends. This might be by making an element mandatory when the core standard says it's optional, or by adding a controlled vocabulary. Elements from other standards can be added as long as they don't conflict.</aside>
+				</section>
+
+				<section>
+					<h3>ISOwtf and Gemini</h3>
+					<p>Standards start as a set of rules defined "on paper", and the core standard for Geospatial metadata is ISO19115</p>
+					<p>ISO19139 is the implementation of that paper standard in XML</p>
+					<p>GEMINI is an extension to ISO19139 for UK geospatial metadata</p>
+					<aside class="notes">Gemini adds in some UK-specific terms and code lists, reduces some choices (such as language), and adds some elements from other standards such as ISO19119 for services</aside>
+				</section>
+
+				<section>
+					<h3>But what about INSPIRE?</h3>
+					<p>Do we still need it? Yes!</p>
+					<p>INSPIRE had a really good purpose- to make it easier to share datasets across geographic and political boundaries</p>
+					<p>Literally all you have to do is make metadata available for a few key datasets, in UK Gemini format, and make it, and the data, discoverable</p>
+					<aside class="notes">The INSPIRE regulations were amended in 2018 so they could be retained in UK law after Brexit. The original reasoning for INSPIRE was interoperable cross-border environmental data- so you could stitch together (for example) flood model data over country and county boundaries and have it match up. What's not to like about that?</aside>
+				</section>
+
+				<section>
+					<h3>Other standards and acronyms</h3>
+					<p>Dublin Core is a basic, domain-agnostic standard for describing any sort of resource</p>
+					<p>DCAT and DCAT-AP are profiles of Dublin Core, widely used in catalogues such as CKAN</p>
+					<p>Rather than XML, Dublin Core and DCAT use RDF (Resource Description Framework)</p>
+					<aside class="notes">The Dublin in Dublin Core relates to Dublin, Ohio rather than Dublin, Ireland. RDF is a data model that comprises "triple statements", comprising a subject, a predicate or relationship, and an object, and it's widely used for linked data and semantic web implementations. A good metadata catalogue will allow you to publish and ingest metadata in both ISO19139 and DCAT formats.</aside>
+				</section>
+
+				<section>
+					<h2>How do I even start with all of this</h2>
+				</section>
+
+				<section>
+					<h3>Do as little as possible!</h3>
+					<p>Use a standard template for your metadata and you can import it into a catalogue when you're ready</p>
+					<p>Automatically create metadata where possible</p>
+					<p>Use open standards for data and metadata to make sharing easy</p>
+					<p>Use an open source catalogue to get help, bug fixes, and new developments</p>
+				</section>
+
+				<section>
+					<h3>So if I don't do spatial, can I just switch off?</h3>
+					<p>No! Use it for non-spatial datasets, and workflows, and even GDPR reporting</p>
+					<aside class="notes">The core ISO19139 standard allows the use of elements from many other standards. A good metadata catalogue will allow you to do a deep dive into these elements to focus on what's important</aside>
+				</section>
+
+				<section>
+					<h3>I still have questions!</h3>
+					<p>Use our handy metadata mailbag!</p>
+					<p>Look out for news of the UK GeoNetwork User Group</p>
+				</section>
+
+
+
+			</div>
+
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/search/search.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+
+			// Also available as an ES module, see:
+			// https://revealjs.com/initialization/
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+			});
+
+		</script>
+
+	</body>
+</html>
