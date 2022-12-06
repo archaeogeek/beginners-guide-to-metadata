@@ -31,40 +31,46 @@
 				<section>
 					<h3>A Beginner's Guide to Metadata</h3>
 					<p>
-						<small><a href="http://astuntechnology.com">Jo Cook and Elena Robu, Astun Technology</a></small>
+						<small><a href="http://astuntechnology.com">Jo Cook and Elena Robu | Astun Technology</a></small>
 					</p>
 				</section>
 
 				<section>
-					<h2>Hello!</h2>
+					<h2>Hello! 👋</h2>
 					<aside class="notes">We're the Data Discoverability team at Astun Technology, and over the next 30 minutes we're going to clear up what this whole metadata thing is, and why you should do it, and hopefully bust some of the jargon surrounding it</aside>
 				</section>
 
 				<section>
 						<h3>What is metadata?</h3>
-						<p>The label on a can that tells you...</p>
-						<p>What's actually in it</p>
-						<p>The best before date</p>
-						<p>The company that made it</p>
+						<p class="fragment fade-left">The label on a can that tells you...</p>
+						<p class="fragment fade-left">What's actually in it</p>
+						<p class="fragment fade-left">The best before date</p>
+						<p class="fragment fade-left">The company that made it</p>
 						<aside class="notes">Metadata is usually described as data about data, but that doesn't really tell you much. Think of it as the difference between heating up some custard to go on your pudding, or some dog food.</aside>
 				</section>
 
 				<section>
 					<h3>But what is it really?</h3>
-					<p>Additional information that sits alongside the dataset it relates to</p>
-					<p>It should contain a standard set of information, in a standard format, so it's both human and machine-readable</p>
-					<aside class="notes">It can be stored in a separate file, in a catalogue, or embedded in the dataset itself. We're going to focus on using the GeoNetwork metadata catalogue because it allows us to do all of this, in an open source, interoperable way</aside>
+					<p class="fragment fade-left">Information that sits alongside the dataset and tells you...</p>
+					<p class="fragment fade-left">What the dataset is for</p>
+					<p class="fragment fade-left">When it was last updated (and how often this happens)</p>
+					<p class="fragment fade-left">Who to contact to get hold of a copy or report a problem</p>
+					<aside class="notes">It should contain a standard set of information, in a standard format, so it's both human and machine-readable. It can be stored in a separate file, in a catalogue, or embedded in the dataset itself. We're going to focus on using the GeoNetwork metadata catalogue because it allows us to do all of this, in an open source, interoperable way</aside>
 				</section>
 						
 
 				<section>
 					<h3>Why is it important?</h3>
-					<p>The direct benefit: It helps people find and acquire the right data for their task</p>
+					<p class="fragment fade-left">It helps people find and acquire the right data for their task</p>
+					<p class="fragment fade-left">Improved data sharing increases efficiency and reduces cost</p>
+					<aside class="notes">Two examples- flood zone data. Ten year old data, digitised from a survey with a 10km grid, could mean the difference between Granny's house being at risk from a flood, or not. COVID- we all got pretty good at deciding whether case data was useful or not. For this sort of dataset you need to know its getting daily updates. Metadata reduces the amount of time people need to search for datasets, and reduces the likelihood of their choosing the wrong dataset for the task at hand. A good catalogue will include user statistics and feedback options, helping data providers know which datasets are being used, and providing an easy way for people to report problems.</aside>
 				</section>
 
 				<section>
-					<h3>Why is it important (part 2)?</h3>
-					<p>Many indirect benefits: Improved data sharing increases efficiency and reduces cost</p>
+					<h3>Why is it important? (Part Two)</h3>
+					<p>Quality metadata helps search engines understand the data</p>
+					<p>This pushes it higher up in search results</p>
+					<aside class="notes">A good catalogue will include machine-readable output for metadata as standard</aside>
 				</section>
 
 				<section>
@@ -81,19 +87,10 @@
 
 				<section>
 					<h3>XML continued</h3>
-					<p>Rules on how and what should be in a metadata record are defined by schemas</p>
-					<p>A record can contain elements from different shared vocabularies, using XML namespaces</p>
+					<p>Rules on what should be in a metadata record are defined by schemas</p>
+					<p>A record can re-use elements from many different schemas using namespaces</p>
 					<p>A valid record must be both "well-formed" (eg no errors in the xml structure) and "schema-valid"</p>
-					<p>Validation rules are often supplied as schematron files</p>
-					<aside class="notes">We probably want to show an example of an xml record with various bits highlighted</aside>
-				</section>
-
-				<section>
-					<h3>Related terms</h3>
-					<p>XSL(T): used for transforming XML documents into other XML, or even other formats such as HTML, text</p>
-					<p>XPath: a way of referring to elements in an XML document</p>
-					<p>XQuery: a SQL-like way of querying the elements in an XML document</p>
-					<aside class="notes">These are used extensively within metadata catalogues such as GeoNetwork to control the display of records on the page, and to allow updates to records. We probably want to show an example of an xml record with various bits highlighted</aside>
+					<aside class="notes">There are a number of other tools, such as XSL(T) for transforming XML, XPath for referring to a particular bit of XML in a document, and XQuery for doing SQL-like queries. These are used extensively within metadata catalogues such as GeoNetwork to control the display of records on the page, and to allow updates to records.</aside>
 				</section>
 
 				<section>
