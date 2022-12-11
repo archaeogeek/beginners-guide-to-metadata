@@ -43,50 +43,32 @@
 					<aside class="notes">Over the next 30 minutes we're going to clear up what this whole metadata thing is, and why you should do it, and hopefully bust some of the jargon surrounding it</aside>
 				</section>
 
-				<section data-background-image="./images/cans.jpg" alt="cans" class="full" data-background-size="cover">
-					<h3 class="fragment box" style="color:white">The Problem</h3>
-					<p class="fragment" style="line-height:250%"><span class="box">People need to find data</span></p>
-					<p class="fragment"style="line-height:250%"><span class="box">Metadata helps, but it's hard!</span></p>
-					<p class="fragment" style="line-height:250%"><span class="box">It's all about data discovery</span></p>
-					<aside class="notes">In this talk we're going to try and address step 2, with a sneaky peek at steps 1 and 3 too</aside>
-				</section>
-
-				<section data-background-image="./images/beans.jpg" alt="baked beans can label" class="full" data-background-size="contain">
+				<section data-background-image="./images/cans.jpg" alt="unlabelled" class="full" data-background-size="cover">
 						<h3 class="box" style="color:white;background-color:var(--astun-red)">What is metadata?</h3>
-						<p class="fragment box-left fade-in-then-out">The label on a can that tells you...</p>
-						<p class="fragment box-left fade-in-then-out">What's actually in it</p>
-						<p class="fragment box-left fade-in-then-out">The best before date</p>
-						<p class="fragment box-left fade-in">The company that made it</p>
-						<aside class="notes">Metadata is usually described as data about data, but that doesn't really tell you much. Think of it as the difference between heating up some custard to go on your pudding, or some dog food.</aside>
+						<img class="fragment box" style="background-color:var(--astun-red)" src="./images/chatgpt-simple.png"/>
+						<aside class="notes">Metadata is usually described as data about data, but that doesn't really tell you much. Think of it as the labels on cans that ensure you heat up custard to go on your pudding, rather than dog food.</aside>
 				</section>
-
-				<section data-background-image="./images/bond.png" alt="bond paper file" class="full" data-background-size="contain">
-					<h3 class="box" style="color:white;background-color:var(--astun-teal)">How does this apply to data?</h3>
-					<p class="fragment box-right fade-in-then-out"style="background-color:var(--astun-teal)">All the above, plus...</p>
-					<p class="fragment box-right fade-in-then-out" style="background-color:var(--astun-teal)">Usage restrictions</p>
-					<p class="fragment box-right fade-in-then-out" style="background-color:var(--astun-teal)">When it was last updated (and how often this happens)</p>
-					<p class="fragment box-right fade-in-then-out" style="background-color:var(--astun-teal)">Who to contact to get hold of a copy or report a problem</p>
-					<span class="fragment box-right fade-in" style="background-color:var(--astun-teal)"><p><a target="_blank" href="https://spatialdata.gov.scot/geonetwork/srv/eng/catalog.search#/metadata/ee8c689a-5e39-4fa1-8dfa-1c69b0d95831">👉 Example record</a></p></span>
-					<aside class="notes">It should contain a standard set of information, in a standard format, so it's both human and machine-readable. It can be stored in a separate file, in a catalogue, or embedded in the dataset itself. We're going to focus on using the GeoNetwork metadata catalogue because it allows us to do all of this, in an open source, interoperable way</aside>
-				</section>
-						
 
 				<section data-background-image="./images/covid-map.jpeg" alt="covid map on screen" class="full" data-background-size="cover">
 					<h3 class="box" style="color:white;background-color:var(--astun-orange)">Why is it important?</h3>
-					<p class="fragment box-left fade-in-then-out" style="background-color:var(--astun-orange)">It helps people find and acquire the right data for their task</p>
-					<p class="fragment box-left fade-in-then-out" style="background-color:var(--astun-orange)">It increases efficiency and reduces cost</p>
-					<p class="fragment box-left fade-in-then-out" style="background-color:var(--astun-orange)">It adds value beyond that of the source datasets</p>
-					<span class="fragment box-right fade-in" style="background-color:var(--astun-orange)"><p><a target="_blank" href="https://coronavirus.data.gov.uk/search?postcode=LA1+4UR">👉 COVID Dashboard</a></p></span>
-					<aside class="notes">Two examples- flood zone data. Ten year old data, digitised from a survey with a 10km grid, could mean the difference between Granny's house being at risk from a flood, or not. COVID- we all got pretty good at deciding whether case data was useful or not. For this sort of dataset you need to know its getting daily updates. Metadata reduces the amount of time people need to search for datasets, and reduces the likelihood of their choosing the wrong dataset for the task at hand. A good catalogue will include user statistics and feedback options, helping data providers know which datasets are being used, and providing an easy way for people to report problems.</aside>
+					<img class="fragment box" style="background-color:var(--astun-orange)" src="./images/chatgpt-important.png"/>
 				</section>
 
-				<section data-background-image="./images/polling-districts-scotland.png" alt="ssdi polling districts" class="full" data-background-size="contain">
-					<h3 class="box" style="color:white;background-color:var(--astun-orange)">Why is it important? (Part Two)</h3>
+				<section data-background-image="./images/mashups.png" alt="granny mashup" class="full" data-background-size="800px 600px" data-background-position="bottom 60px">
+					<h3 class="box" style="color:white;background-color:var(--astun-orange);margin-top: 50px !important">But also...</h3>
+					<p class="fragment box-left fade-in-then-out" style="background-color:var(--astun-orange)">It increases efficiency and reduces cost</p>
+					<p class="fragment box-left fade-in-then-out" style="background-color:var(--astun-orange)">It adds value beyond that of the source datasets</p>
 					<p class="fragment box-left fade-in-then-out" style="background-color:var(--astun-orange)">Quality metadata helps search engines understand the data</p>
-					<p class="fragment box-left fade-in-then-out" style="background-color:var(--astun-orange)">This pushes it higher up in search results and gives users access to more relevant searches</p>
-					<img class="fragment box-left fade-in-then-out" style="background-color:var(--astun-orange)" src="./images/polling-districts-search-results.png">
-					<aside class="notes">A good catalogue will include machine-readable output for metadata as standard</aside>
+					<p class="fragment box-left fade-in" style="background-color:var(--astun-orange)"><a target="_blank" href="https://coronavirus.data.gov.uk/search?postcode=LA1+4UR">👉 Serious example</a></p>
+					<aside class="notes">COVID- we all got pretty good at deciding whether case data was useful or not. For this sort of dataset you need to know its getting daily updates. Metadata reduces the amount of time people need to search for datasets, and reduces the likelihood of their choosing the wrong dataset for the task at hand. A good catalogue will include user statistics and feedback options, helping data providers know which datasets are being used, and providing an easy way for people to report problems.</aside>
 				</section>
+
+				<section data-background-image="./images/cans.jpg" alt="cans" class="full" data-background-size="cover">
+					<h3 class="box" style="color:white;background-color:var(--astun-green)">Unfortunately...</h3>
+					<img class="fragment box" style="background-color:var(--astun-green)" src="./images/chatgpt.png"/>
+					<aside class="notes">So, according to ChatGPT, metadata is complex, difficult to organise, with many different standards and formats. Hopefully we can make some of this easier to understand in this talk!</aside>
+				</section>
+				
 
 				<section data-background-image="./images/alien.jpg" alt="alien" class="full" data-background-size="cover">
 					<h2 class="box" style="color:white;background-color:var(--astun-red);margin-top: 250px !important">The code and jargon bit</h2>
@@ -110,72 +92,92 @@
 					<aside class="notes">There are a number of other tools, such as XSL(T) for transforming XML, XPath for referring to a particular bit of XML in a document, and XQuery for doing SQL-like queries. These are used extensively within metadata catalogues such as GeoNetwork to control the display of records on the page, and to allow updates to records.</aside>
 				</section>
 
-				<section>
+				<section data-background-image="./images/bored_dog.png" alt="dall-e bored dog" class="full" data-background-size="contain">
 					<h3 class="box" style="color:white;background-color:var(--astun-teal)">Schemas, Standards and Profiles</h3>
-					<p class="fragment box-left fade-in-then-out" style="background-color:var(--astun-teal)">Schema: specifies the structure of the metadata, the elements, the vocabularies</p>
-					<p class="fragment box-left fade-in-then-out" style="background-color:var(--astun-teal)">Standard: a schema that has been developed and maintained by a standards organisation</p>
-					<p class="fragment box-left fade-in-then-out" style="background-color:var(--astun-teal)">Profile: an extension to a standard, or an implementation of it in software, or both</p>
+					<p class="fragment box-right fade-in-then-out" style="background-color:var(--astun-teal)">Schema: specifies the structure of the metadata, the elements, the vocabularies</p>
+					<p class="fragment box-right fade-in-then-out" style="background-color:var(--astun-teal)">Standard: a schema that has been developed and maintained by a standards organisation</p>
+					<p class="fragment box-right fade-in-then-out" style="background-color:var(--astun-teal)">Profile: an extension to a standard, or an implementation of it in software, or both</p>
 					<img class="fragment box-right fade-in-then-out" style="background-color:var(--astun-teal)" src="./images/iso19139.png">
 					<aside class="notes">You'll hear all of these used interchangeably when people talk about metadata. Generally speaking, a profile can only be more strict than the standard it extends. This might be by making an element mandatory when the core standard says it's optional, or by adding a controlled vocabulary. Elements from other standards can be added as long as they don't conflict.</aside>
 				</section>
 
-				<section>
+				<section  data-background-image="./images/sleeping-dog.png" alt="dall-e bored dog" class="full" data-background-size="contain">
 					<h3 class="box" style="color:white;background-color:var(--astun-teal)">ISO and Gemini</h3>
-					<span class="fragment box-left fade-in-then-out twocolumn" style="background-color:var(--astun-teal);width:60%">
+					<span class="fragment box-right fade-in-then-out twocolumn" style="background-color:var(--astun-teal);width:60%">
 					<p>The core standard for Geospatial metadata is <strong style="color:var(--astun-red)">ISO19115</strong></p>
 					<img src="./images/bsi_iso19115.png"/></span>
-					<span class="fragment box-left fade-in-then-out twocolumn" style="background-color:var(--astun-teal);width:60%">
+					<span class="fragment box-right fade-in-then-out twocolumn" style="background-color:var(--astun-teal);width:60%">
 						<p><strong style="color:var(--astun-red)">ISO19139</strong> is the implementation of ISO19115 in XML</p>
 						<img src="./images/bsi_iso19139.png"/></span>
-					<span class="fragment box-left fade-in-then-out twocolumn" style="background-color:var(--astun-teal);width:60%">
+					<span class="fragment box-right fade-in-then-out twocolumn" style="background-color:var(--astun-teal);width:60%">
 						<p><strong style="color:var(--astun-red)">GEMINI</strong> is an extension to ISO19139 for UK geospatial metadata</p>
 						<img src="./images/agi_gemini.png"/></span>
 					<span class="fragment box-right fade-in" style="background-color:var(--astun-teal)"><p><a target="_blank" href="https://www.agi.org.uk/uk-gemini/">👉 Gemini Online</a></p></span>
-					<aside class="notes">Gemini adds in some UK-specific terms and code lists, reduces some choices (such as language), and adds some elements from other standards such as ISO19119 for services. /home/jo/Git/iso19139.gemini23/src/main/plugin/iso19139.gemini23/schema/gmd/constraints.xsd</aside>
+					<aside class="notes">Gemini adds in some UK-specific terms and code lists, reduces some choices (such as language), and adds some elements from other standards such as ISO19119 for services</aside>
 				</section>
 
-				<section data-background-image="./images/pineapple.png" alt="xml t-shirt" class="full" data-background-size="cover">
-					<h3 class="box" style="color:white;background-color:var(--astun-green)">But what about INSPIRE?</h3>
+				<section data-background-image="./images/Pineapple.jpg" alt="pineapple" class="full" data-background-size="cover">
+					<h3 class="box" style="color:white;background-color:var(--astun-green)">What about INSPIRE?</h3>
 					<p class="fragment box-left fade-in-then-out" style="background-color:var(--astun-green)">Yes, you still have to do it</p>
-					<p class="fragment box-left fade-in-then-out" style="background-color:var(--astun-green)">Identify key environmenal datasets &rarr; provide metadata in Gemini format &rarr; make data available via web services &rarr; publish to data.gov.uk </p>
+					<p class="fragment box-left fade-in" style="background-color:var(--astun-green)">Identify key environmental datasets</p>
+					<p class="fragment box-right fade-in" style="background-color:var(--astun-green)">Provide metadata in Gemini format</p>
+					<p class="fragment box-left fade-in" style="background-color:var(--astun-green);margin-top: 250px !important">Make data available via web services</p>
+					<p class="fragment box-right fade-in" style="background-color:var(--astun-green);margin-top: 250px !important">Publish to data.gov.uk</p>
+					<p style="color:white" class="attribution">Unsplash CC0 1.0</p>
 					<aside class="notes">The INSPIRE regulations were amended in 2018 so they could be retained in UK law after Brexit. The original reasoning for INSPIRE was interoperable cross-border environmental data- so you could stitch together (for example) flood model data over country and county boundaries and have it match up. Literally all you have to do is make metadata available for a few key datasets, in UK Gemini format, and make it, and the data, discoverable</aside>
 				</section>
 
-				<section>
-					<h3>Other standards and acronyms</h3>
-					<p>Dublin Core is a basic, domain-agnostic standard for describing any sort of resource</p>
-					<p>DCAT and (Geo)DCAT-AP are profiles of Dublin Core, widely used in catalogues such as CKAN</p>
-					<p>Rather than XML, Dublin Core and DCAT use RDF (Resource Description Framework)</p>
-					<aside class="notes">The Dublin in Dublin Core relates to Dublin, Ohio rather than Dublin, Ireland. RDF is a data model that comprises "triple statements", comprising a subject, a predicate or relationship, and an object, and it's widely used for linked data and semantic web implementations. A good metadata catalogue will allow you to publish and ingest metadata in both ISO19139 and DCAT formats.</aside>
+				<section  data-background-image="./images/intersection.png" alt="venn diagram" class="full" data-background-size="1000px 750px" data-background-position="bottom">
+					<h3 class="box" style="color:white;background-color:var(--astun-teal)">Other standards and acronyms</h3>
+					<p class="fragment box-left fade-in" style="background-color:var(--astun-teal);width: 125px !important">Dublin Core</p>
+					<p class="fragment box-right fade-in" style="background-color:var(--astun-teal);width: 125px !important">DCAT</p>
+					<p class="fragment box-left fade-in" style="background-color:var(--astun-teal);margin-top: 250px !important;width: 125px !important">RDF</p>
+					<p class="fragment box-right fade-in" style="background-color:var(--astun-teal);margin-top: 250px !important;width: 125px !important">Turtle</p>
+					<aside class="notes">Other standards and acronyms that you might come across are at the intersection of metadata and linked data. Dublin Core is a basic, domain-agnostic standard for describing any sort of resource. The Dublin in Dublin Core relates to Dublin, Ohio rather than Dublin, Ireland. DCAT and (Geo)DCAT-AP are profiles of Dublin Core, widely used in catalogues such as CKAN. RDF and Turtle is a data model that comprises "triple statements", comprising a subject, a predicate or relationship, and an object, and are widely used for linked data and semantic web implementations. A good metadata catalogue will allow you to publish and ingest metadata in both ISO19139 and DCAT formats.</aside>
 				</section>
 
-				<section>
-					<h2>Help! I'm scared!</h2>
-					<aside class="notes">Using xml, rdf, and all their associated terminologies and acronyms can be scary and off-putting</aside>
-				</section>
-
-
-				<section>
-					<h3>Do as little as possible!</h3>
-					<p>Start simple</p>
-					<p>Keep to a structure</p>
-					<p>Adopt a solution that hides the complexity</p>
-					<p>Adopt open standards to aid sharing and discovery</p>
-				</section>
-
-				<section>
-					<h3>So if I don't do spatial, can I just switch off?</h3>
-					<p>No! Use it for non-spatial datasets, and workflows, and even GDPR reporting</p>
+				<section data-background-image="./images/swiss-army-knife.jpg" alt="venn diagram" class="full" data-background-size="cover">
+					<h3 class="box" style="color:white;background-color:var(--astun-red)">🤔 Is metadata just for spatial?</h3>
+					<p class="fragment box-left fade-in-then-out" style="background-color:var(--astun-red)">No! Other uses include...</p>
+					<p class="fragment box-left fade-in-then-out" style="background-color:var(--astun-red)">Non-spatial datasets...</p>
+					<p class="fragment box-left fade-in-then-out" style="background-color:var(--astun-red)">Detailed workflow recording...</p>
+					<p class="fragment box-left fade-in" style="background-color:var(--astun-red)">GDPR records...</p>
+					<p class="attribution" style="color:white">James Case, Flickr CC0 1.0</p>
 					<aside class="notes">The core ISO19139 standard allows the use of elements from many other standards. A good metadata catalogue will allow you to do a deep dive into these elements to focus on what's important</aside>
 				</section>
 
-				<section>
-					<h3>I still have questions!</h3>
-					<p>Contact us!</p>
-					<p>Use our handy metadata mailbag!</p>
-					<p>Look out for news of the UK GeoNetwork User Group</p>
+				<section data-background-image="./images/kitten-hiding.jpg" alt="kitten hiding" class="full" data-background-size="cover">
+					<h2 class="box" style="color:white;background-color:var(--astun-teal)">Help! I'm scared!</h2>
+					<p style="color:white" class="attribution">Unsplash CC0 1.0</p>
+					<aside class="notes">Using xml, rdf, and all their associated terminologies and acronyms can be scary and off-putting</aside>
 				</section>
 
+				<section data-background-image="./images/keep-it-simple.jpg" alt="simple lego" class="full" data-background-size="cover">
+					<h3 class="box" style="color:white;background-color:var(--astun-teal)">Where to start</h3>
+					<p class="fragment box-left fade-in-then-out" style="color:white;background-color:var(--astun-teal)">Keep it simple</p>
+					<p class="fragment box-left fade-in-then-out" style="color:white;background-color:var(--astun-teal)">Stick to a structure</p>
+					<p class="fragment box-left fade-in-then-out" style="color:white;background-color:var(--astun-teal)">Metadata in a spreadsheet is better than no metadata</p>
+					<p class="attribution" style="color:white">elPadawan, Flickr CC BY-SA 2.0</p>
+					<aside class="notes">Recording a small number of key metadata elements for your datasets in a simple spreadsheet is a good way to start</aside>
+				</section>
+
+				<section data-background-image="./images/lego-ninja.jpg" alt="lego ninja" class="full" data-background-size="cover">
+					<h3 class="box" style="color:white;background-color:var(--astun-green)">Next level</h3>
+					<p class="fragment box-left fade-in-then-out" style="color:white;background-color:var(--astun-green)">Adopt a solution that hides the complexity</p>
+					<p class="fragment box-left fade-in-then-out" style="color:white;background-color:var(--astun-green)">Adopt open standards to aid sharing and discovery</p>
+					<p class="fragment box-left fade-in-then-out" style="color:white;background-color:var(--astun-green)">Don't let perfect be the enemy of good</p>
+					<p class="attribution" style="color:white">wiredforlego, Flickr CC BY-SA 2.0</p>
+					<aside class="notes"></aside>
+				</section>
+
+				<section data-background-image="./images/handsup.jpg" alt="hands up" class="full" data-background-size="cover">
+					<h3 class="box" style="color:white;background-color:var(--astun-orange)">I still have questions!</h3>
+					<p class="fragment box-left fade-in-then-out" style="color:white;background-color:var(--astun-orange)">Contact us!</p>
+					<p class="fragment box-left fade-in-then-out" style="color:white;background-color:var(--astun-orange)">Use our handy metadata mailbag!</p>
+					<p class="fragment box-left fade-in-then-out" style="color:white;background-color:var(--astun-orange)">Look out for news of the UK GeoNetwork User Group</p>
+					<p class="fragment box-left fade-in-then-out" style="color:white;background-color:var(--astun-orange)">???</p>
+					<p class="attribution" style="color:white">U.S Embassy and Consulates in Canada, Flickr Public Domain Mark 1.0</p>
+				</section>
 
 
 			</div>
